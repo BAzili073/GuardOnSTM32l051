@@ -29,6 +29,7 @@ void GPIO_init(){
 	RCC->IOPENR |= RCC_IOPENR_GPIOAEN;
 	RCC->IOPENR |= RCC_IOPENR_GPIOBEN;
 	RCC->IOPENR |= RCC_IOPENR_GPIOCEN;
+	RCC->IOPENR |= RCC_IOPENR_GPIOHEN;
 
 		GPIO_InitTypeDef initSrtuct;
 
@@ -52,7 +53,7 @@ void GPIO_init(){
 
 
 		/////////////////////////////////////////////////////////////////////UART2
-		initSrtuct.Alternate = GPIO_AF0_USART2;
+		initSrtuct.Alternate = GPIO_AF4_USART2;
 		initSrtuct.Mode = GPIO_MODE_AF_PP;
 		initSrtuct.Pull = GPIO_NOPULL;
 		initSrtuct.Pin = UART2_PIN_RX | UART2_PIN_TX;
@@ -60,7 +61,7 @@ void GPIO_init(){
 		HAL_GPIO_Init( UART2_PORT, &initSrtuct);
 
 		/////////////////////////////////////////////////////////////////////UART3
-		initSrtuct.Alternate = GPIO_AF0_LPUART1;
+		initSrtuct.Alternate = GPIO_AF4_LPUART1;
 		initSrtuct.Mode = GPIO_MODE_AF_PP;
 		initSrtuct.Pull = GPIO_NOPULL;
 		initSrtuct.Pin = UART3_PIN_RX | UART3_PIN_TX;

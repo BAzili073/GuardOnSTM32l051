@@ -23,11 +23,11 @@ typedef struct INPUT_obj{
 } INPUT_obj;
 
  INPUT_obj input[MAX_INPUT] ={
-	    [0] = {	.port = INPUT_PORT, 	.pin = INPUT_1,			.mode = 0, .set_time_to_alarm = 6, .time_to_alarm = -1, .state = 0, .alarm = 0, .v_min = 3, .v_max = 7, .adc_channel = ADC_CHANNEL_1, .text = "vhod"},
-	    [1] = {	.port = INPUT_PORT, 	.pin = INPUT_2, 		.mode = 0, .set_time_to_alarm = 0, .time_to_alarm = -1, .state = 0, .alarm = 0, .v_min = 3, .v_max = 7, .adc_channel = ADC_CHANNEL_4,},
-	    [2] = {	.port = INPUT_PORT,		.pin = INPUT_3, 		.mode = 0, .set_time_to_alarm = 0, .time_to_alarm = -1, .state = 0, .alarm = 0, .v_min = 3, .v_max = 7, .adc_channel = ADC_CHANNEL_5,},
-	    [3] = {	.port = INPUT_PORT,		.pin = INPUT_4,			.mode = 0, .set_time_to_alarm = 0, .time_to_alarm = -1, .state = 0, .alarm = 0, .v_min = 3, .v_max = 7, .adc_channel = ADC_CHANNEL_6,},
-	    [4] = {	.port = INPUT_PORT, 	.pin = INPUT_5, 		.mode = 0, .set_time_to_alarm = 0, .time_to_alarm = -1, .state = 0, .alarm = 0, .v_min = 3, .v_max = 7, .adc_channel = ADC_CHANNEL_7,},
+	    [0] = {	.port = INPUT_1_PORT, 	.pin = INPUT_1,			.mode = 0, .set_time_to_alarm = 6, .time_to_alarm = -1, .state = 0, .alarm = 0, .v_min = 3, .v_max = 7, .adc_channel = ADC_CHANNEL_8, .text = "vhod"},
+	    [1] = {	.port = INPUT_2_PORT, 	.pin = INPUT_2, 		.mode = 0, .set_time_to_alarm = 0, .time_to_alarm = -1, .state = 0, .alarm = 0, .v_min = 3, .v_max = 7, .adc_channel = ADC_CHANNEL_5,},
+	    [2] = {	.port = INPUT_3_PORT,	.pin = INPUT_3, 		.mode = 0, .set_time_to_alarm = 0, .time_to_alarm = -1, .state = 0, .alarm = 0, .v_min = 3, .v_max = 7, .adc_channel = ADC_CHANNEL_4,},
+	    [3] = {	.port = INPUT_4_PORT,	.pin = INPUT_4,			.mode = 0, .set_time_to_alarm = 0, .time_to_alarm = -1, .state = 0, .alarm = 0, .v_min = 3, .v_max = 7, .adc_channel = ADC_CHANNEL_6,},
+	    [4] = {	.port = INPUT_5_PORT, 	.pin = INPUT_5, 		.mode = 0, .set_time_to_alarm = 0, .time_to_alarm = -1, .state = 0, .alarm = 0, .v_min = 3, .v_max = 7, .adc_channel = ADC_CHANNEL_7,},
 	    [5] = {	.port = B_INPUT_PORT,  	.pin = B_INPUT_1, 		.mode = 0, .set_time_to_alarm = 0, .time_to_alarm = -1, .state = 0, .alarm = 0},
 	    [6] = {	.port = B_INPUT_PORT,  	.pin = B_INPUT_2,   	.mode = 0, .set_time_to_alarm = 0, .time_to_alarm = -1, .state = 0, .alarm = 0},
 	    [7] = {	.port = B_INPUT_PORT,  	.pin = B_INPUT_3,    	.mode = 0, .set_time_to_alarm = 0, .time_to_alarm = -1, .state = 0, .alarm = 0},

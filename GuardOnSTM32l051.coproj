@@ -8,7 +8,7 @@
         <Option name="UseFPU" value="0"/>
         <Option name="UserEditCompiler" value=""/>
         <Option name="SupportCPlusplus" value="0"/>
-        <Option name="DEBUG" value="2"/>
+        <Option name="DEBUG" value="1"/>
         <Option name="WARNING" value="1"/>
         <Includepaths>
           <Includepath path="."/>
@@ -48,21 +48,21 @@
     <DebugOption>
       <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
-      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="2M"/>
       <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
       <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
       <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
-      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="1"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
-      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="C:\Users\user\AppData\Roaming\CooCox\CoIDE\config\flash\CooCox-Flash\CoIDE_STM32L0xx_64K\STM32L0xx_64.elf"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="C:\Users\Sergey\AppData\Roaming\CooCox\CoIDE\config\flash\CooCox-Flash\CoIDE_STM32L0xx_64K\STM32L0xx_64.elf"/>
     </DebugOption>
     <ExcludeFile/>
   </Target>
@@ -84,15 +84,15 @@
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_rng.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_rng.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_tim.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_tim.c" type="1"/>
     <File name="components/cmsis_core/arm_const_structs.h" path="components/coocox-master/cmsis_core/source/arm_const_structs.h" type="1"/>
-    <File name="main_guard.c" path="main_guard.c" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_dac.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_dac.h" type="1"/>
+    <File name="main_guard.c" path="main_guard.c" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_crc_ex.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_crc_ex.h" type="1"/>
     <File name="components/cmsis_core/core_sc300.h" path="components/coocox-master/cmsis_core/source/core_sc300.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_smbus.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_smbus.c" type="1"/>
     <File name="main_guard.h" path="main_guard.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_dac_ex.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_dac_ex.h" type="1"/>
-    <File name="guard_func.h" path="guard_func.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_uart.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_uart.h" type="1"/>
+    <File name="guard_func.h" path="guard_func.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_i2s.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_i2s.h" type="1"/>
     <File name="components/cmsis_core/core_cm4_simd.h" path="components/coocox-master/cmsis_core/source/core_cm4_simd.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal.h" type="1"/>
@@ -101,8 +101,8 @@
     <File name="modem.c" path="modem.c" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_flash_ex.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_flash_ex.c" type="1"/>
     <File name="input.c" path="input.c" type="1"/>
-    <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_lptim.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_lptim.h" type="1"/>
     <File name="modem_sms_func.h" path="modem_sms_func.h" type="1"/>
+    <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_lptim.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_lptim.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_tim.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_tim.h" type="1"/>
     <File name="components/cmsis_core/core_cm0plus.h" path="components/coocox-master/cmsis_core/source/core_cm0plus.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_conf.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_conf.h" type="1"/>
@@ -111,8 +111,8 @@
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_smartcard_ex.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_smartcard_ex.c" type="1"/>
     <File name="my_string.c" path="my_string.c" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_rng.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_rng.c" type="1"/>
-    <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_wwdg.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_wwdg.h" type="1"/>
     <File name="UART.h" path="UART.h" type="1"/>
+    <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_wwdg.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_wwdg.h" type="1"/>
     <File name="output.h" path="output.h" type="1"/>
     <File name="ADC_func.c" path="ADC_func.c" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_rtc.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_rtc.h" type="1"/>
@@ -121,8 +121,8 @@
     <File name="components/cmsis_core/core_cm3.h" path="components/coocox-master/cmsis_core/source/core_cm3.h" type="1"/>
     <File name="modem_module.h" path="modem_module.h" type="1"/>
     <File name="SPI.c" path="SPI.c" type="1"/>
-    <File name="modem.h" path="modem.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_i2c_ex.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_i2c_ex.h" type="1"/>
+    <File name="modem.h" path="modem.h" type="1"/>
     <File name="GPIO_func.h" path="GPIO_func.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_flash_ramfunc.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_flash_ramfunc.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_crc.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_crc.c" type="1"/>
@@ -133,8 +133,8 @@
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_i2c_ex.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_i2c_ex.c" type="1"/>
     <File name="FingerPrint.h" path="FingerPrint.h" type="1"/>
     <File name="EEPROMfunc.c" path="EEPROMfunc.c" type="1"/>
-    <File name="defines.h" path="defines.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_comp.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_comp.h" type="1"/>
+    <File name="defines.h" path="defines.h" type="1"/>
     <File name="main.c" path="app/main.c" type="1"/>
     <File name="sms_command.c" path="sms_command.c" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_smartcard_ex.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_smartcard_ex.h" type="1"/>
@@ -144,11 +144,11 @@
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_dma.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_dma.h" type="1"/>
     <File name="components/cmsis_core/core_cmInstr.h" path="components/coocox-master/cmsis_core/source/core_cmInstr.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_cryp.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_cryp.h" type="1"/>
-    <File name="components/cmsis_core/core_cmFunc.h" path="components/coocox-master/cmsis_core/source/core_cmFunc.h" type="1"/>
-    <File name="components/cmsis_core" path="" type="2"/>
     <File name="components/STM32L051xx_CUBELIB/system_stm32l0xx.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/system_stm32l0xx.c" type="1"/>
-    <File name="FingerPrint.c" path="FingerPrint.c" type="1"/>
+    <File name="components/cmsis_core" path="" type="2"/>
+    <File name="components/cmsis_core/core_cmFunc.h" path="components/coocox-master/cmsis_core/source/core_cmFunc.h" type="1"/>
     <File name="EEPROMfunc.h" path="EEPROMfunc.h" type="1"/>
+    <File name="FingerPrint.c" path="FingerPrint.c" type="1"/>
     <File name="led.h" path="led.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_smartcard.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_smartcard.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_iwdg.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_iwdg.h" type="1"/>
@@ -184,9 +184,9 @@
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_tim_ex.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_tim_ex.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_cortex.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_cortex.h" type="1"/>
     <File name="components/cmsis_core/core_cm0.h" path="components/coocox-master/cmsis_core/source/core_cm0.h" type="1"/>
-    <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_usart_ex.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_usart_ex.h" type="1"/>
     <File name="DS18x20.h" path="DS18x20.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_cryp_ex.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_cryp_ex.h" type="1"/>
+    <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_usart_ex.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_usart_ex.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_uart_ex.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_uart_ex.c" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_gpio.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_gpio.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/system_stm32l0xx.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/system_stm32l0xx.h" type="1"/>
@@ -207,8 +207,8 @@
     <File name="TM_KEY.h" path="TM_KEY.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_adc.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_adc.c" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_rcc.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_rcc.h" type="1"/>
-    <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_msp_template.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_msp_template.c" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l051xx.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l051xx.h" type="1"/>
+    <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_msp_template.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_msp_template.c" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_pcd_ex.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_pcd_ex.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_pwr_ex.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_pwr_ex.c" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_tim_ex.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_tim_ex.c" type="1"/>
@@ -218,15 +218,15 @@
     <File name="components" path="" type="2"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_adc_ex.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_adc_ex.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_tsc.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_tsc.h" type="1"/>
-    <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_irda.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_irda.h" type="1"/>
-    <File name="components/STM32L051xx_CUBELIB" path="" type="2"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_cortex.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_cortex.c" type="1"/>
+    <File name="components/STM32L051xx_CUBELIB" path="" type="2"/>
+    <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_irda.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_irda.h" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_rcc_ex.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_rcc_ex.h" type="1"/>
     <File name="modem_call_func.c" path="modem_call_func.c" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_irda_ex.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_irda_ex.h" type="1"/>
+    <File name="TIMs.c" path="TIMs.c" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_crc_ex.c" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_crc_ex.c" type="1"/>
     <File name="components/STM32L051xx_CUBELIB/stm32l0xx_hal_rtc_ex.h" path="components/coocox-master/STM32L051xx_CUBELIB/source/stm32l0xx_hal_rtc_ex.h" type="1"/>
-    <File name="TIMs.c" path="TIMs.c" type="1"/>
     <File name="components/cmsis_core/arm_math.h" path="components/coocox-master/cmsis_core/source/arm_math.h" type="1"/>
   </Files>
   <Bookmarks/>

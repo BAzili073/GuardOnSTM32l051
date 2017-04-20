@@ -41,7 +41,7 @@ void UART2_init(){
 	RCC -> APB1ENR |= RCC_APB1ENR_USART2EN;
 	NVIC_EnableIRQ(USART2_IRQn);
 	huart2.Instance = USART2;
-	huart2.Init.BaudRate = 115200;//9600;
+	huart2.Init.BaudRate = 9600;//9600;
 	huart2.Init.WordLength = UART_WORDLENGTH_8B;
 	huart2.Init.StopBits = UART_STOPBITS_1;
 	huart2.Init.Parity = UART_PARITY_NONE;
@@ -78,12 +78,12 @@ void send_string_to_GSM(char * s){
 }
 
 void send_char_to_GSM(char c){
-	while((USART1->ISR & USART_ISR_TXE) == 0);
-	USART1->TDR = c;
+	while((USART2->ISR & USART_ISR_TXE) == 0);
+	USART2->TDR = c;
 }
 void send_char_to_UART2(char c){
-	USART2->TDR = c;
-	while((USART2->ISR & USART_ISR_TXE) == 0);
+	USART1->TDR = c;
+	while((USART1->ISR & USART_ISR_TXE) == 0);
 }
 
 void send_string_to_UART2(char * s){
@@ -112,12 +112,12 @@ void send_string_to_UART3(char * s){
 
 
 void USART1_IRQHandler(){
-		 USART_get_message();
+		USART2_get_message();
 		 USART1->ISR &= ~(USART_ISR_RXNE | USART_ISR_ORE);
 }
 
 void USART2_IRQHandler(){
-		 USART2_get_message();
+		USART_get_message();
 		 USART2->ISR &= ~(USART_ISR_RXNE | USART_ISR_ORE);
 }
 void USART3_IRQHandler(){
@@ -125,7 +125,7 @@ void USART3_IRQHandler(){
 }
 
 void USART_get_message(){
-	gsm_buffer[gsm_buffer_char_counter] = USART1 -> RDR;
+	gsm_buffer[gsm_buffer_char_counter] = USART2 -> RDR;
 	gsm_buffer_char_counter++;
 	if (gsm_buffer_char_counter == GSM_BUFFER_SIZE) {
 		gsm_buffer_char_counter = 0;
@@ -133,7 +133,7 @@ void USART_get_message(){
 }
 
 void USART2_get_message(){
-	uart2_buffer[uart2_buffer_char_counter] = USART2 -> RDR;
+	uart2_buffer[uart2_buffer_char_counter] = USART1 -> RDR;
 	uart2_buffer_char_counter++;
 	if (uart2_buffer_char_counter == UART2_BUFFER_SIZE) {
 		uart2_buffer_char_counter = 0;

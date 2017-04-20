@@ -52,7 +52,7 @@ void  TIM21_IRQHandler(){
 	static uint8_t min = 0;
 	static uint8_t hour = 0;
 	static uint16_t day = 0;
-
+//
 	  if (timeout_7) timeout_7 --;
 	  modem_time();
 

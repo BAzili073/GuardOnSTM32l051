@@ -15,46 +15,83 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/user/CoIDE/workspace/GuardOnSTM32l051/app/main.c" title="main.c" tooltip="C:/Users/user/CoIDE/workspace/GuardOnSTM32l051/app/main.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GuardOnSTM32l051/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="871" selectionTopPixel="169"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="input.c" partName="input.c" path="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/input.c" title="input.c" tooltip="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/input.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GuardOnSTM32l051/input.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6109" selectionTopPixel="2130"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="GPIO_func.c" partName="GPIO_func.c" path="C:/Users/user/CoIDE/workspace/GuardOnSTM32l051/GPIO_func.c" title="GPIO_func.c" tooltip="C:/Users/user/CoIDE/workspace/GuardOnSTM32l051/GPIO_func.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GuardOnSTM32l051/GPIO_func.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5162" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="modem.h" partName="modem.h" path="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/modem.h" title="modem.h" tooltip="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/modem.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GuardOnSTM32l051/modem.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="178" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="UART.c" partName="UART.c" path="C:/Users/user/CoIDE/workspace/GuardOnSTM32l051/UART.c" title="UART.c" tooltip="C:/Users/user/CoIDE/workspace/GuardOnSTM32l051/UART.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="modem.c" partName="modem.c" path="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/modem.c" title="modem.c" tooltip="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/modem.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GuardOnSTM32l051/modem.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="10284" selectionTopPixel="5445"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="UART.c" partName="UART.c" path="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/UART.c" title="UART.c" tooltip="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/UART.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GuardOnSTM32l051/UART.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1064" selectionTopPixel="710"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3122" selectionTopPixel="1665"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="core_cm0plus.h" partName="core_cm0plus.h" path="C:/Users/user/CoIDE/workspace/GuardOnSTM32l051/components/coocox-master/cmsis_core/source/core_cm0plus.h" title="core_cm0plus.h" tooltip="C:/Users/user/CoIDE/workspace/GuardOnSTM32l051/components/coocox-master/cmsis_core/source/core_cm0plus.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GuardOnSTM32l051/components/cmsis_core/core_cm0plus.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="3" selectionOffset="32335" selectionTopPixel="9775"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32l051xx.h" partName="stm32l051xx.h" path="C:/Users/user/CoIDE/workspace/GuardOnSTM32l051/components/coocox-master/STM32L051xx_CUBELIB/source/stm32l051xx.h" title="stm32l051xx.h" tooltip="C:/Users/user/CoIDE/workspace/GuardOnSTM32l051/components/coocox-master/STM32L051xx_CUBELIB/source/stm32l051xx.h" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32l051xx.h" partName="stm32l051xx.h" path="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/components/coocox-master/STM32L051xx_CUBELIB/source/stm32l051xx.h" title="stm32l051xx.h" tooltip="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/components/coocox-master/STM32L051xx_CUBELIB/source/stm32l051xx.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GuardOnSTM32l051/components/STM32L051xx_CUBELIB/stm32l051xx.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="5168" selectionTopPixel="1564"/>
+<editorState selectionHorizontalPixel="0" selectionLength="15" selectionOffset="137735" selectionTopPixel="27660"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="TIMs.c" partName="TIMs.c" path="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/TIMs.c" title="TIMs.c" tooltip="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/TIMs.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GuardOnSTM32l051/TIMs.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1060" selectionTopPixel="600"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="clock.c" partName="clock.c" path="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/clock.c" title="clock.c" tooltip="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/clock.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GuardOnSTM32l051/clock.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="329" selectionTopPixel="35"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="defines.h" partName="defines.h" path="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/defines.h" title="defines.h" tooltip="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/defines.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GuardOnSTM32l051/defines.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="923" selectionTopPixel="530"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="ADC_func.c" partName="ADC_func.c" path="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/ADC_func.c" title="ADC_func.c" tooltip="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/ADC_func.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GuardOnSTM32l051/ADC_func.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="8" selectionOffset="410" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="TIMs.c" partName="TIMs.c" path="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/TIMs.c" title="TIMs.c" tooltip="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/TIMs.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GuardOnSTM32l051/TIMs.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1060" selectionTopPixel="750"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="TIMs.h" partName="TIMs.h" path="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/TIMs.h" title="TIMs.h" tooltip="C:/Users/Sergey/CoIDE/workspace/GuardOnSTM32l051/TIMs.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GuardOnSTM32l051/TIMs.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
+<view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
+<viewState>
+<ExpressionKeySet ExpKeys="cmd,i,tel,gsm_buffer,adc_value,input_t,"/>
+</viewState>
+</view>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="11">
 <expanded>
 <element path="/GuardOnSTM32l051"/>
 </expanded>
 <selection>
-<element path="/GuardOnSTM32l051/my_string.c"/>
+<element path="/GuardOnSTM32l051/main.c"/>
 </selection>
 </viewState>
 </view>
+<view id="org.coocox.codebugger.trace.ui.traceview" partName="Semihosting"/>
 <view id="org.eclipse.search.ui.views.SearchView" partName="Search">
 <viewState isPinned="false">
-<view IMemento.internal.id="org.eclipse.cdt.ui.pdomSearchViewPage" definitionColumnWidth="150" locationColumnWidth="300" matchColumnWidth="300" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" showEnclosingDefinitions="true"/>
 <view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+<view IMemento.internal.id="org.eclipse.cdt.ui.pdomSearchViewPage" definitionColumnWidth="150" locationColumnWidth="300" matchColumnWidth="300" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" showEnclosingDefinitions="true"/>
 </viewState>
 </view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
@@ -78,11 +115,7 @@
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
 </view>
-<view id="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" partName="Memory Browser">
-<viewState>
-<MemoryBroser ComboItemsValue="" FocuseTabIndex="0" TabsValue="" TextValue="" horizontalPosition="0" verticalPosition="0"/>
-</viewState>
-</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables"/>
 </views>
 <perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.coocox.builder.perspective.CoBuilder">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
@@ -106,8 +139,8 @@
 <hide_menu_item_id id="org.coocox.codebugger.configuration.showMemoryBrowserAction"/>
 <hide_menu_item_id id="org.coocox.codebugger.configuration.showVariablesAction"/>
 <hide_menu_item_id id="org.coocox.builder.ui.openProjectExplorerAction"/>
-<hide_menu_item_id id="org.coocox.codebugger.trace.actions.ShowTraceControlAction"/>
 <hide_menu_item_id id="org.eclipse.debug.ui.commands.TerminateAndRelaunch"/>
+<hide_menu_item_id id="org.coocox.codebugger.trace.actions.ShowTraceControlAction"/>
 <hide_menu_item_id id="org.coocox.codebugger.configuration.showRegistersAction"/>
 <hide_toolbar_item_id id="org.eclipse.cdt.debug.internal.ui.actions.ToggleInstructionStepModeAction"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
@@ -136,7 +169,7 @@
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1e7f8ea" ratio="0.6992561" ratioLeft="658" ratioRight="283" relationship="4" relative="org.eclipse.ui.internal.ViewStack@870a33">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1e7f8ea" ratio="0.7352472" ratioLeft="461" ratioRight="166" relationship="4" relative="org.eclipse.ui.internal.ViewStack@870a33">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -206,46 +239,68 @@
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.coocox.builder.ui.views.ProjectView"/>
-<view id="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser"/>
-<fastViewBars>&#x0A;<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@1b605ab" orientation="256" selectedTabId="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" style="0">&#x0A;<fastViews>&#x0A;<view id="org.coocox.codebugger.trace.ui.traceview" ratio="0.3"/>
+<view id="org.eclipse.debug.ui.ExpressionView"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@1b605ab" orientation="256" selectedTabId="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" style="0">
+<fastViews>
+<view id="org.coocox.codebugger.trace.ui.traceview" ratio="0.3"/>
 <view id="org.eclipse.debug.ui.VariableView" ratio="0.3"/>
 </fastViews>
 </fastViewBar>
 </fastViewBars>
 <viewLayoutRec closeable="false" id="org.eclipse.debug.ui.DebugView"/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@c11a9b">&#x0A;<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">&#x0A;<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@c11a9b">
+<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
+<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@777fb8" ratio="0.74960214" ratioLeft="1413" ratioRight="472" relationship="2" relative="org.eclipse.ui.internal.ViewStack@c11a9b">&#x0A;<folder activePageID="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="Memory Browser"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
-</presentation>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@777fb8" ratio="0.874247" ratioLeft="1161" ratioRight="167" relationship="2" relative="org.eclipse.ui.internal.ViewStack@c11a9b">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.internal.ViewStack@c11a9b">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.internal.ViewStack@c11a9b">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@9e42d0" ratio="0.6992561" ratioLeft="658" ratioRight="283" relationship="4" relative="org.eclipse.ui.internal.ViewStack@c11a9b">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@9e42d0" ratio="0.72408295" ratioLeft="454" ratioRight="173" relationship="4" relative="org.eclipse.ui.internal.ViewStack@c11a9b">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1b605ab" ratio="0.5" ratioLeft="956" ratioRight="956" relationship="2" relative="org.eclipse.ui.internal.ViewStack@9e42d0">&#x0A;<folder appearance="2" expanded="0">&#x0A;<page content="org.coocox.codebugger.trace.ui.traceview" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1b605ab" ratio="0.5" ratioLeft="956" ratioRight="956" relationship="2" relative="org.eclipse.ui.internal.ViewStack@9e42d0">
+<folder appearance="2" expanded="0">
+<page content="org.coocox.codebugger.trace.ui.traceview" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.VariableView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@176640d" ratio="0.49973476" ratioLeft="942" ratioRight="943" relationship="2" relative="org.eclipse.ui.internal.ViewStack@9e42d0">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@176640d" ratio="0.49973476" ratioLeft="942" ratioRight="943" relationship="2" relative="org.eclipse.ui.internal.ViewStack@9e42d0">
+<folder activePageID="org.eclipse.debug.ui.ExpressionView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@12e54cb" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.internal.ViewStack@c11a9b">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@12e54cb" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.internal.ViewStack@c11a9b">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="org.coocox.coassistant.view.CoAssistantView_debug" label="LabelNotFound"/>
@@ -260,181 +315,46 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/guard_func.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/guard_func.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/DS18x20.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/modem.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/modem_call_func.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/modem_sms_func.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/sms_command.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/input.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/1-Wire.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/main.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/TIMs.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/GPIO_func.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/GPIO_func.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/my_string.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/modem_module.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/modem.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/clock.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/defines.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/EEPROMfunc.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/components/STM32L051xx_CUBELIB/stm32l051xx.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/ADC_func.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/ADC_func.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/UART.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/components/STM32L051xx_CUBELIB/stm32l0xx_hal_gpio_ex.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/UART.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GuardOnSTM32l051/TIMs.h"/>
 </editors>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
+<item historyLabel="input.c" index="0">
+<position info="not_deleted" x="6102" y="0"/>
 </item>
-<item historyLabel="GPIO_func.h" index="12">
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="955" y="0"/>
+</item>
+<item historyLabel="input.c" index="0">
+<position info="not_deleted" x="5991" y="0"/>
+</item>
+<item historyLabel="TIMs.c" index="2">
+<position info="not_deleted" x="3264" y="0"/>
+</item>
+<item historyLabel="TIMs.c" index="2">
+<position info="not_deleted" x="1098" y="0"/>
+</item>
+<item historyLabel="TIMs.h" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
+<item historyLabel="TIMs.c" index="2">
+<position info="not_deleted" x="1098" y="0"/>
 </item>
-<item historyLabel="my_string.c" index="13">
+<item historyLabel="TIMs.h" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
+<item historyLabel="TIMs.c" index="2">
+<position info="not_deleted" x="1098" y="0"/>
 </item>
-<item historyLabel="1-Wire.c" index="9">
+<item historyLabel="TIMs.h" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
+<item historyLabel="TIMs.c" index="2">
+<position info="not_deleted" x="1060" y="0"/>
 </item>
-<item historyLabel="input.c" index="8">
-<position info="not_deleted" x="552" y="0"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="sms_command.c" index="7">
-<position info="not_deleted" x="0" y="8911"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="modem_module.h" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="modem_sms_func.c" index="6">
-<position info="not_deleted" x="543" y="0"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="modem.h" index="15">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="modem_call_func.c" index="5">
-<position info="not_deleted" x="170" y="0"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="modem.c" index="4">
-<position info="not_deleted" x="1398" y="0"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="guard_func.c" index="2">
-<position info="not_deleted" x="1325" y="0"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="DS18x20.c" index="3">
-<position info="not_deleted" x="6622" y="0"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="guard_func.h" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="clock.c" index="16">
-<position info="not_deleted" x="83" y="14"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="defines.h" index="17">
-<position info="not_deleted" x="64" y="0"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="EEPROMfunc.c" index="18">
-<position info="not_deleted" x="445" y="0"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="TIMs.c" index="10">
-<position info="not_deleted" x="1192" y="0"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="stm32l051xx.h" index="19">
-<position info="not_deleted" x="34922" y="4"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="ADC_func.h" index="20">
-<position info="not_deleted" x="118" y="0"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="ADC_func.c" index="21">
-<position info="not_deleted" x="564" y="0"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="UART.h" index="22">
-<position info="not_deleted" x="252" y="0"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="stm32l0xx_hal_gpio_ex.h" index="23">
-<position info="not_deleted" x="21176" y="15"/>
-</item>
-<item historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="UART.c" index="24">
-<position info="not_deleted" x="1064" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2248" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="871" y="0"/>
-</item>
-<item active="true" historyLabel="GPIO_func.c" index="11">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="stm32l051xx.h" index="19">
-<position info="not_deleted" x="5168" y="13"/>
+<item active="true" historyLabel="input.c" index="0">
+<position info="not_deleted" x="5991" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -443,52 +363,44 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.welcome.ui.WelcomePage" name="" tooltip="">
-<persistable>
-<org.coocox.welcome.ui.WelcomePage/>
-</persistable>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TIMs.h" tooltip="GuardOnSTM32l051/TIMs.h">
+<persistable path="/GuardOnSTM32l051/TIMs.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32l051xx.h" tooltip="GuardOnSTM32l051/components/STM32L051xx_CUBELIB/stm32l051xx.h">
-<persistable path="/GuardOnSTM32l051/components/STM32L051xx_CUBELIB/stm32l051xx.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TIMs.c" tooltip="GuardOnSTM32l051/TIMs.c">
+<persistable path="/GuardOnSTM32l051/TIMs.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="core_cm0plus.h" tooltip="GuardOnSTM32l051/components/cmsis_core/core_cm0plus.h">
-<persistable path="/GuardOnSTM32l051/components/cmsis_core/core_cm0plus.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="startup_stm32l051xx.S" tooltip="GuardOnSTM32l051/components/STM32L051xx_CUBELIB/startup_stm32l051xx.S">
+<persistable path="/GuardOnSTM32l051/components/STM32L051xx_CUBELIB/startup_stm32l051xx.S"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="my_string.c" tooltip="GuardOnSTM32l051/my_string.c">
-<persistable path="/GuardOnSTM32l051/my_string.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ADC_func.c" tooltip="GuardOnSTM32l051/ADC_func.c">
+<persistable path="/GuardOnSTM32l051/ADC_func.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="GPIO_func.h" tooltip="GuardOnSTM32l051/GPIO_func.h">
-<persistable path="/GuardOnSTM32l051/GPIO_func.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="defines.h" tooltip="GuardOnSTM32l051/defines.h">
+<persistable path="/GuardOnSTM32l051/defines.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="1-Wire.c" tooltip="GuardOnSTM32l051/1-Wire.c">
-<persistable path="/GuardOnSTM32l051/1-Wire.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="input.c" tooltip="GuardOnSTM32l051/input.c">
-<persistable path="/GuardOnSTM32l051/input.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sms_command.c" tooltip="GuardOnSTM32l051/sms_command.c">
-<persistable path="/GuardOnSTM32l051/sms_command.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="modem_module.h" tooltip="GuardOnSTM32l051/modem_module.h">
-<persistable path="/GuardOnSTM32l051/modem_module.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="modem.h" tooltip="GuardOnSTM32l051/modem.h">
-<persistable path="/GuardOnSTM32l051/modem.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="modem_sms_func.c" tooltip="GuardOnSTM32l051/modem_sms_func.c">
-<persistable path="/GuardOnSTM32l051/modem_sms_func.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="modem_call_func.c" tooltip="GuardOnSTM32l051/modem_call_func.c">
-<persistable path="/GuardOnSTM32l051/modem_call_func.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="DS18x20.c" tooltip="GuardOnSTM32l051/DS18x20.c">
-<persistable path="/GuardOnSTM32l051/DS18x20.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="clock.c" tooltip="GuardOnSTM32l051/clock.c">
+<persistable path="/GuardOnSTM32l051/clock.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="modem.c" tooltip="GuardOnSTM32l051/modem.c">
 <persistable path="/GuardOnSTM32l051/modem.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="guard_func.c" tooltip="GuardOnSTM32l051/guard_func.c">
-<persistable path="/GuardOnSTM32l051/guard_func.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TIMs.c" tooltip="GuardOnSTM32l051/TIMs.c">
+<persistable path="/GuardOnSTM32l051/TIMs.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="startup_stm32l051xx.S" tooltip="GuardOnSTM32l051/components/STM32L051xx_CUBELIB/startup_stm32l051xx.S">
+<persistable path="/GuardOnSTM32l051/components/STM32L051xx_CUBELIB/startup_stm32l051xx.S"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ADC_func.c" tooltip="GuardOnSTM32l051/ADC_func.c">
+<persistable path="/GuardOnSTM32l051/ADC_func.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="defines.h" tooltip="GuardOnSTM32l051/defines.h">
+<persistable path="/GuardOnSTM32l051/defines.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="clock.c" tooltip="GuardOnSTM32l051/clock.c">
+<persistable path="/GuardOnSTM32l051/clock.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="modem.c" tooltip="GuardOnSTM32l051/modem.c">
+<persistable path="/GuardOnSTM32l051/modem.c"/>
 </file>
 </mruList>
 </workbench>

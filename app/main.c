@@ -59,9 +59,11 @@ int main(void) {
 ////	GPIO_interrupt_init();
 //	ERASE_EEPROM();
 //
+
 	read_settings();
 	add_device_check();
 	one_wire_start_conversion_temp();
+
 	modem_online();
 #ifdef DEBUG
 	send_string_to_UART3("START PROGTAMM! \n\r");
@@ -89,7 +91,6 @@ int main(void) {
 	}
 
     while(1) {
-
 
 
 	main_guard();

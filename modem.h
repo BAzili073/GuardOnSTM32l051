@@ -7,7 +7,7 @@
 #include INCLUDED_FILE_2
 
 #define MODEM_ON_PORT GPIOB
-#define MODEM_ON_PIN GPIO_PIN_2
+#define MODEM_ON_PIN GPIO_PIN_9
 #define OK_ANSWER 1
 #define NO_ANSWER 0
 
