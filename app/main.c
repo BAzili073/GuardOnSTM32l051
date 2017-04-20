@@ -48,60 +48,56 @@ int main(void) {
 	set_core_clock();
 	GPIO_init();
 	TIM6_init();
-	UART1_init();
-	while(1){
-		send_string_to_GSM("wEEEEEEEEEE");
-	}
-
-//	ADC_init();
-////    TIM2_init(); //PWM
+	TIM21_init();
+	ADC_init();
+//    TIM2_init(); //PWM
 //	TIM7_init();
-//	UART1_init();
-//	UART2_init();
-//	UART3_init();
+	UART1_init();
+	UART2_init();
+	UART3_init();
 //
 ////	GPIO_interrupt_init();
-////	ERASE_EEPROM();
+//	ERASE_EEPROM();
 //
-//	read_settings();
-//	add_device_check();
-//	one_wire_start_conversion_temp();
-//	modem_online();
-//#ifdef DEBUG
-//	send_string_to_UART3("START PROGTAMM! \n\r");
-//#endif
-//
-//	if (check_device_setting(DEVICE_SETTING_AUTO_GUARD_AT_START)){
-//		guard_on();
-//	}
-////
-//
-//
-//		str_add_str(output_sms_message,sizeof(output_sms_message),"zapusk",0);
-//		str_add_str(output_sms_message,sizeof(output_sms_message),"\nver:5.1 24.01.17",0);
-//		str_add_str(output_sms_message,sizeof(output_sms_message),"\nur:",0);
-//		str_add_num(output_sms_message,(get_gsm_signal_quality()*100/31));
-//		str_add_str(output_sms_message,sizeof(output_sms_message),"%\nkl: ",0);
-//		str_add_num(output_sms_message,get_tm_key_number());
-//		str_add_str(output_sms_message,sizeof(output_sms_message),"\ndat:",0);
-//		str_add_num(output_sms_message,get_DS18x20_count());
-//		send_sms_message_for_all(output_sms_message,SMS_FUNCTION_SERVICE);
-//
-//	if (check_device_setting(DEVICE_SETTING_SMS_AT_STARTUP)){
-//			get_all_temp();
-//			sms_command_r();
-//	}
+	read_settings();
+	add_device_check();
+	one_wire_start_conversion_temp();
+	modem_online();
+#ifdef DEBUG
+	send_string_to_UART3("START PROGTAMM! \n\r");
+#endif
 
-//    while(1) {
+	if (check_device_setting(DEVICE_SETTING_AUTO_GUARD_AT_START)){
+		guard_on();
+	}
+//
 
 
-//
-//	main_guard();
-//	modem_check_state();
-//	set_timeout_7(1);
-//	while_timeout_7();
-//    }
-//    return 0;
+		str_add_str(output_sms_message,sizeof(output_sms_message),"zapusk",0);
+		str_add_str(output_sms_message,sizeof(output_sms_message),"\nver:5.1 24.01.17",0);
+		str_add_str(output_sms_message,sizeof(output_sms_message),"\nur:",0);
+		str_add_num(output_sms_message,(get_gsm_signal_quality()*100/31));
+		str_add_str(output_sms_message,sizeof(output_sms_message),"%\nkl: ",0);
+		str_add_num(output_sms_message,get_tm_key_number());
+		str_add_str(output_sms_message,sizeof(output_sms_message),"\ndat:",0);
+		str_add_num(output_sms_message,get_DS18x20_count());
+		send_sms_message_for_all(output_sms_message,SMS_FUNCTION_SERVICE);
+
+	if (check_device_setting(DEVICE_SETTING_SMS_AT_STARTUP)){
+			get_all_temp();
+			sms_command_r();
+	}
+
+    while(1) {
+
+
+
+	main_guard();
+	modem_check_state();
+	set_timeout_7(1);
+	while_timeout_7();
+    }
+    return 0;
 }
 //
 //
@@ -163,51 +159,51 @@ int main(void) {
 //    /* When the following line is hit, the variables contain the register values. */
 // //   for( ;; );
 //}
-// void add_device_check(){
-//	 int counter = 0;
-//	 if (!one_wire_level()){
-//		 led_on(0);
-//		 while((!one_wire_level()) && (counter < 20)){
-//			 set_timeout_7(1);
-//			 while_timeout_7();
-//			 counter++;
-//		 }
-//		 if (one_wire_level()){
-//			 led_on(1);
-//			 counter = 0;
-//			 while((one_wire_level()) && (counter < 20)){
-//				 set_timeout_7(1);
-//				 while_timeout_7();
-//				 counter++;
-//			 }
-//			 if (!one_wire_level()){
-//				 led_on(2);	set_timeout_7(5);while_timeout_7();
-//				 led_on(3);	set_timeout_7(5);while_timeout_7();
-//				 led_on(4);	set_timeout_7(5);while_timeout_7();
-//				 led_off(0);led_off(1);led_off(2);led_off(3);led_off(4);
-//				 while(!one_wire_level());
-//				add_device_mode();
-//			 }
-//		 }else{
-//			 //one wire error
-//
-//		 }
-//	 }
-// }
-//
-//void add_device_mode(){
-//	int state_reset_input = check_input(9);
-//	int reset_try = 0;
-//	while(1){
-//		one_wire_add_device();
-//		int a = check_input(9);
-//		if (!state_reset_input && a){
-//			reset_try++;
-//			if (reset_try >= 4) {
-//			FULL_ERASE_DEVICE();
-//			}
-//		}
-//
-//		state_reset_input = a;
-//	}
-//}
+ void add_device_check(){
+	 int counter = 0;
+	 if (!one_wire_level()){
+		 led_on(0);
+		 while((!one_wire_level()) && (counter < 20)){
+			 set_timeout_7(1);
+			 while_timeout_7();
+			 counter++;
+		 }
+		 if (one_wire_level()){
+			 led_on(1);
+			 counter = 0;
+			 while((one_wire_level()) && (counter < 20)){
+				 set_timeout_7(1);
+				 while_timeout_7();
+				 counter++;
+			 }
+			 if (!one_wire_level()){
+				 led_on(2);	set_timeout_7(5);while_timeout_7();
+				 led_on(3);	set_timeout_7(5);while_timeout_7();
+				 led_on(4);	set_timeout_7(5);while_timeout_7();
+				 led_off(0);led_off(1);led_off(2);led_off(3);led_off(4);
+				 while(!one_wire_level());
+				add_device_mode();
+			 }
+		 }else{
+			 //one wire error
+
+		 }
+	 }
+ }
+
+void add_device_mode(){
+	int state_reset_input = check_input(9);
+	int reset_try = 0;
+	while(1){
+		one_wire_add_device();
+		int a = check_input(9);
+		if (!state_reset_input && a){
+			reset_try++;
+			if (reset_try >= 4) {
+			FULL_ERASE_DEVICE();
+			}
+		}
+
+		state_reset_input = a;
+	}
+}
