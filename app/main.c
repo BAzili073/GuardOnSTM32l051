@@ -48,6 +48,11 @@ int main(void) {
 	set_core_clock();
 	GPIO_init();
 	TIM6_init();
+	UART1_init();
+	while(1){
+		send_string_to_GSM("wEEEEEEEEEE");
+	}
+
 //	ADC_init();
 ////    TIM2_init(); //PWM
 //	TIM7_init();

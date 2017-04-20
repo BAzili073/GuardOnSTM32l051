@@ -5,9 +5,9 @@
 #include "defines.h"
 
 
-#define UART1_PIN_RX GPIO_PIN_9
-#define UART1_PIN_TX GPIO_PIN_10
-#define UART1_PORT GPIOA
+#define UART1_PIN_RX GPIO_PIN_7
+#define UART1_PIN_TX GPIO_PIN_6
+#define UART1_PORT GPIOB
 
 #define UART2_PIN_RX GPIO_PIN_2
 #define UART2_PIN_TX GPIO_PIN_3
