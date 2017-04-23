@@ -13,14 +13,15 @@
 #define DEBUG_MODEM
 #define DEBUG_READ_SETTINGS
 #define DEBUG_MODEM_UART
-//#define DEBUG_220V
-//#define DEBUG_DS18x20
-//#define DEBUG_1WIRE
-//#define DEBUG_ADD_DEVICE
+#define DEBUG_220V
+#define DEBUG_DS18x20
+#define DEBUG_1WIRE
+#define DEBUG_ADD_DEVICE
 #define DEBUG_GUARD
 #define DEBUG_INPUTS
+#define DEBUG_OUTPUTS
 #define DEBUG_B_INPUTS
-//#define DEBUG_INPUTS_ADC
+#define DEBUG_INPUTS_ADC
 #define DEBUG_ALARM
 #define DEBUG
 
@@ -64,18 +65,18 @@
 #define POWERED_220V 0
 #define POWERED_BATTERY 1
 
-#define OUTPUT_1_PORT GPIOB
-#define OUTPUT_2_PORT GPIOB
+#define OUTPUT_1_PORT GPIOA
+#define OUTPUT_2_PORT GPIOA
 #define OUTPUT_3_PORT GPIOA
-#define OUTPUT_4_PORT GPIOA
-#define OUTPUT_5_PORT GPIOA
+#define OUTPUT_4_PORT GPIOB
+#define OUTPUT_5_PORT GPIOB
 
 
-#define OUTPUT_1 GPIO_PIN_3
-#define OUTPUT_2 GPIO_PIN_4
-#define OUTPUT_3 GPIO_PIN_11
-#define OUTPUT_4 GPIO_PIN_15
-#define OUTPUT_5 GPIO_PIN_12
+#define OUTPUT_1 GPIO_PIN_11
+#define OUTPUT_2 GPIO_PIN_12
+#define OUTPUT_3 GPIO_PIN_15
+#define OUTPUT_4 GPIO_PIN_3
+#define OUTPUT_5 GPIO_PIN_4
 
 
 #define GUARD_OFF 0
@@ -105,18 +106,18 @@
 #define OUT_MODE_220V 'p'
 
 #define MAX_LED 5
-#define LED_1_PORT GPIOC
-#define LED_2_PORT GPIOC
-#define LED_3_PORT GPIOH
-#define LED_4_PORT GPIOH
+#define LED_1_PORT GPIOH
+#define LED_2_PORT GPIOH
+#define LED_3_PORT GPIOC
+#define LED_4_PORT GPIOC
 #define LED_5_PORT GPIOC
 
 
-#define LED_1 GPIO_PIN_14
-#define LED_2 GPIO_PIN_13
-#define LED_3 GPIO_PIN_1
-#define LED_4 GPIO_PIN_0
-#define LED_5 GPIO_PIN_15
+#define LED_1 GPIO_PIN_1
+#define LED_2 GPIO_PIN_0
+#define LED_3 GPIO_PIN_15
+#define LED_4 GPIO_PIN_14
+#define LED_5 GPIO_PIN_13
 
 
 #define  LED_RED 3

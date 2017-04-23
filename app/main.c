@@ -50,11 +50,12 @@ int main(void) {
 	TIM6_init();
 	TIM21_init();
 	ADC_init();
-//    TIM2_init(); //PWM
-//	TIM7_init();
+////    TIM2_init(); //PWM
+////	TIM7_init();
 	UART1_init();
 	UART2_init();
 	UART3_init();
+
 //
 ////	GPIO_interrupt_init();
 //	ERASE_EEPROM();

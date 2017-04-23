@@ -60,10 +60,20 @@ void set_output_settings(uint8_t output_t, uint8_t mode_t){
 }
 
 void output_on(uint8_t output_t){
+#ifdef DEBUG_OUTPUTS
+		send_string_to_UART3("ON OUTPUT:");
+		send_int_to_UART3(output_t);
+		send_string_to_UART3("/n/r");
+#endif
 	GPIO_HIGH(output[output_t-1].port,(output[output_t-1].pin));
 }
 
 void output_off(uint8_t output_t){
+#ifdef DEBUG_OUTPUTS
+		send_string_to_UART3("OFF OUTPUT:");
+		send_int_to_UART3(output_t);
+		send_string_to_UART3("/n/r");
+#endif
 	GPIO_LOW((output[output_t-1].port),(output[output_t-1].pin));
 }
 

@@ -140,8 +140,7 @@ void TIM6_init(){
 			TIM6->PSC =  16-1;
 }
 
-void set_timeout(int t)
-{
+void set_timeout(int t){
 	TIM6->ARR = t;
 	TIM6->EGR |= TIM_EGR_UG;
 	TIM6->SR &= !TIM_SR_UIF;
