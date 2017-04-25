@@ -404,7 +404,7 @@ uint8_t one_wire_check_keys(){
 #endif
 
 	        } else {
-	          if ((family_code == 0x01) || (family_code == 0x01) || (family_code == 0x01)) {
+	          if ((family_code == 0x01) || (family_code == 0x89) || (family_code == 0x01)) {
 	        	  uint8_t key_access= find_key(key);
 	        	  if (key_access != ONE_WIRE_KEY_DENY) return key_access;
 	          } else {
