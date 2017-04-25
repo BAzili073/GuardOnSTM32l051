@@ -38,23 +38,22 @@ void set_ds18x20_settings(uint8_t ds, int8_t min_temp_t, int8_t max_temp_t ,uint
 	DS18x20[ds].max_temp = max_temp_t; EEPROMWrite((EEPROM_ds18x20_max + ds),DS18x20[ds].max_temp,1);
 	DS18x20[ds].settings = settings_t; EEPROMWrite((EEPROM_ds18x20_settings + ds),DS18x20[ds].settings,1);
 #ifdef DEBUG
-	send_string_to_UART3("Device: Set setting DS18x20! ID:");
+	send_string_to_UART3("\n\rDevice: Set setting DS18x20! ID:");
 	send_int_to_UART3(ds);
 	send_string_to_UART3(" MIN: ");
 	send_int_to_UART3(min_temp_t);
 	send_string_to_UART3(" MAX: ");
 	send_int_to_UART3(max_temp_t);
 	send_string_to_UART3("\n\r SMS: ");
-	if (check_ds18x20_setting(ds,DS18X20_SETTINGS_SMS)) 	send_string_to_UART3("ON \n\r");
-	else send_string_to_UART3("OFF \n\r");
-	send_string_to_UART3("CONTROL OUT: ");
-	if (check_ds18x20_setting(ds,DS18X20_SETTINGS_CONTROL_OUT)) 	send_string_to_UART3("ON \n\r");
-	else send_string_to_UART3("OFF \n\r");
-	send_string_to_UART3("INVERS: ");
-	if (check_ds18x20_setting(ds,DS18X20_SETTINGS_CONTROL_INVER)) 	send_string_to_UART3("ON \n\r");
-	else send_string_to_UART3("OFF \n\r");
+	if (check_ds18x20_setting(ds,DS18X20_SETTINGS_SMS)) 	send_string_to_UART3("ON");
+	else send_string_to_UART3("OFF");
+	send_string_to_UART3("\n\rCONTROL OUT: ");
+	if (check_ds18x20_setting(ds,DS18X20_SETTINGS_CONTROL_OUT)) 	send_string_to_UART3("ON");
+	else send_string_to_UART3("OFF");
+	send_string_to_UART3("\n\rINVERS: ");
+	if (check_ds18x20_setting(ds,DS18X20_SETTINGS_CONTROL_INVER)) 	send_string_to_UART3("ON");
+	else send_string_to_UART3("OFF");
 	send_int_to_UART3(settings_t);
-	send_string_to_UART3(" \n\r ");
 #endif
 }
 
@@ -69,9 +68,8 @@ void add_DS18x20(uint8_t id[8]){
 	if (ds18x20_number < MAX_DS18x20){
 		led_on(4);
 #ifdef DEBUG
-		send_string_to_UART3("TM: Add DS18x20: #");
+		send_string_to_UART3("\n\rTM: Add DS18x20: #");
 		send_int_to_UART3(ds18x20_number);
-		send_string_to_UART3("\n\r");
 #endif
 		ds18x20_number++;
 		EEPROMWrite(EEPROM_ds18x20_numbers,ds18x20_number,1);
@@ -138,7 +136,7 @@ void check_temperature(){
 			if ((DS18x20[i].id[0] == 0x28) || (DS18x20[i].id[0] == 0x22) || (DS18x20[i].id[0] == 0x10)) {
 				DS18x20[i].last_temp = one_wire_read_temp_to_address (DS18x20[i].id);
 #ifdef DEBUG_DS18x20
-	send_string_to_UART3("Adress: ");
+	send_string_to_UART3("\n\rAdress: ");
 	int k;
     for (uint8_t k = 0; k < 8; k++) {
     	char d = DS18x20[i].id[k];
@@ -153,8 +151,6 @@ void check_temperature(){
     	send_int_to_UART3((DS18x20[i].last_temp));
 
     }
-	send_string_to_UART3(" \n\r");
-
 #endif
 	if (DS18x20[i].last_temp != ONE_WIRE_CONVERSION_ERROR){
 				if (((DS18x20[i].last_temp) > DS18x20[i].max_temp) || ((DS18x20[i].last_temp) < DS18x20[i].min_temp)){
@@ -174,12 +170,12 @@ void check_temperature(){
 						if ((DS18x20[i].last_temp) > DS18x20[i].max_temp){
 							DS18x20[i].alarm = DS18X20_ALARM_UP;
 #ifdef DEBUG_DS18x20
-	send_string_to_UART3("T>NORMQ!!!  \n\r");
+	send_string_to_UART3("\n\rT>NORMQ!!!");
 #endif
 						}else{
 							DS18x20[i].alarm = DS18X20_ALARM_DOWN;
 #ifdef DEBUG_DS18x20
-	send_string_to_UART3("T<NORMQ!!! \n\r");
+	send_string_to_UART3("\n\rT<NORMQ!!!");
 #endif
 						}
 
@@ -227,7 +223,7 @@ void check_temperature(){
 						}
 					DS18x20[i].alarm = DS18X20_ALARM_NORM;
 #ifdef DEBUG_DS18x20
-	send_string_to_UART3("T V NORME!!!  \n\r");
+	send_string_to_UART3("\n\rT V NORME!!!");
 #endif
 					}
 

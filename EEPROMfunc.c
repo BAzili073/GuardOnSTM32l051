@@ -75,7 +75,7 @@ EEPROMEnable();
 EEPROMDisable();
 
 #ifdef DEBUG
-	send_string_to_UART3("SYSTEM: FULL EEPROM ERASE! OK! \n\r");
+	send_string_to_UART3("\r\nSYSTEM: FULL EEPROM ERASE! OK!");
 #endif
 }
 

@@ -9,19 +9,22 @@
 #define INCLUDED_FILE_1 "stm32l051xx.h"
 #define INCLUDED_FILE_2 "stm32l0xx.h"
 
+
+#define CODE_VERSION "6.2"
+#define CODE_DATA "24.04.17"
 //#define DEBUG_FINGER
 #define DEBUG_MODEM
 #define DEBUG_READ_SETTINGS
-#define DEBUG_MODEM_UART
-#define DEBUG_220V
+//#define DEBUG_MODEM_UART
+//#define DEBUG_220V
 #define DEBUG_DS18x20
 #define DEBUG_1WIRE
 #define DEBUG_ADD_DEVICE
 #define DEBUG_GUARD
 #define DEBUG_INPUTS
-#define DEBUG_OUTPUTS
+//#define DEBUG_OUTPUTS
 #define DEBUG_B_INPUTS
-#define DEBUG_INPUTS_ADC
+//#define DEBUG_INPUTS_ADC
 #define DEBUG_ALARM
 #define DEBUG
 

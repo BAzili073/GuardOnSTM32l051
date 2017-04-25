@@ -27,10 +27,9 @@ void modem_call(char * number){
 		modem_action = MODEM_ACTION_OUTGOING_CALL;
 
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("MODEM : CALL! Number:  ");
+	send_string_to_UART3("\n\r MODEM : CALL! Number:  ");
 	send_string_to_UART3("+79");
 	send_string_to_UART3(tel_number_temp);
-	send_string_to_UART3(" \n\r");
 #endif
 
 	}
@@ -46,9 +45,8 @@ uint8_t alarm_call(){
 			if (tel[i].access == TEL_ACCESS_ADMIN){
 				modem_call(tel[i].number);
 #ifdef DEBUG_ALARM
-		send_string_to_UART3("Alarm call! Lost try: ");
+		send_string_to_UART3("\n\r Alarm call! Lost try: ");
 		send_int_to_UART3(try);
-		send_string_to_UART3("\r\n");
 #endif
 				while (1){
 					int h = 3;
@@ -89,11 +87,10 @@ void incoming_call(){
 			last_control_ID_number = check_number(tel_number_temp);
 
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("INCOMING CALL! NUMBER: ");
+	send_string_to_UART3("\n\r INCOMING CALL! NUMBER: ");
 	send_string_to_UART3(tel_number_temp);
 	send_string_to_UART3(" ID: ");
 	send_int_to_UART3(last_control_ID_number);
-	send_string_to_UART3(" \n\r");
 #endif
 
 			if (last_control_ID_number > MAX_TEL_NUMBERS){

@@ -50,29 +50,26 @@ void set_output_settings(uint8_t output_t, uint8_t mode_t){
 	if ((mode_t >= '0') && (mode_t < '9')) mode_t = mode_t - '0';
 	output[output_t].mode = mode_t; EEPROMWrite((EEPROM_output_mode + output_t),output[output_t].mode,1);
 #ifdef DEBUG
-	send_string_to_UART3("Device: Set setting output! ID:");
+	send_string_to_UART3("\n\r Device: Set setting output! ID:");
 	send_int_to_UART3(output_t);
 	send_string_to_UART3(" Mode: ");
 	if ((mode_t >= 0) & (mode_t <10)) send_int_to_UART3(mode_t);
 	else send_char_to_UART3(mode_t);
-	send_string_to_UART3(" \n\r ");
 #endif
 }
 
 void output_on(uint8_t output_t){
 #ifdef DEBUG_OUTPUTS
-		send_string_to_UART3("ON OUTPUT:");
+		send_string_to_UART3("\n\rON OUTPUT:");
 		send_int_to_UART3(output_t);
-		send_string_to_UART3("/n/r");
 #endif
 	GPIO_HIGH(output[output_t-1].port,(output[output_t-1].pin));
 }
 
 void output_off(uint8_t output_t){
 #ifdef DEBUG_OUTPUTS
-		send_string_to_UART3("OFF OUTPUT:");
+		send_string_to_UART3("\n\rOFF OUTPUT:");
 		send_int_to_UART3(output_t);
-		send_string_to_UART3("/n/r");
 #endif
 	GPIO_LOW((output[output_t-1].port),(output[output_t-1].pin));
 }

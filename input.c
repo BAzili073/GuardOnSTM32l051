@@ -73,24 +73,23 @@ void set_input_settings(uint8_t inp, uint8_t v_min_t, uint8_t v_max_t,uint8_t mo
 	input[inp].set_time_to_alarm = time_to_alarm_t; EEPROMWrite((EEPROM_input_time_to_alarm + inp),input[inp].set_time_to_alarm,1);
 
 #ifdef DEBUG
-	send_string_to_UART3("Device: Set setting input! ID:");
+	send_string_to_UART3("\n\r Device: Set setting input! ID:");
 	send_int_to_UART3((inp + 1));
 	send_string_to_UART3(" MIN: ");
 	send_int_to_UART3(input[inp].v_min);
 	send_string_to_UART3(" MAX: ");
 	send_int_to_UART3(input[inp].v_max);
 	send_string_to_UART3("\n\rMODE_24H: ");
-	check_input_setting(inp,INPUTS_MODE_24H) ? send_string_to_UART3("ON \n\r") : send_string_to_UART3("OFF \n\r");
+	check_input_setting(inp,INPUTS_MODE_24H) ? send_string_to_UART3("ON") : send_string_to_UART3("OFF");
 
-	send_string_to_UART3("MODE_BUTTON_GUARD: ");
-	check_input_setting(inp,INPUTS_MODE_BUTTON_GUARD) ? send_string_to_UART3("ON \n\r") : send_string_to_UART3("OFF \n\r");
+	send_string_to_UART3("\n\r MODE_BUTTON_GUARD: ");
+	check_input_setting(inp,INPUTS_MODE_BUTTON_GUARD) ? send_string_to_UART3("ON") : send_string_to_UART3("OFF");
 
-	send_string_to_UART3("MODE_INVERS: ");
-	check_input_setting(inp,INPUTS_MODE_INVERS) ? send_string_to_UART3("ON \n\r") : send_string_to_UART3("OFF \n\r");
+	send_string_to_UART3("\n\r MODE_INVERS: ");
+	check_input_setting(inp,INPUTS_MODE_INVERS) ? send_string_to_UART3("ON") : send_string_to_UART3("OFF");
 
-	send_string_to_UART3(" Time to alarm: ");
+	send_string_to_UART3("\n\r Time to alarm: ");
 	send_int_to_UART3(input[inp].set_time_to_alarm);
-	send_string_to_UART3(" \n\r ");
 #endif
 }
 
@@ -121,7 +120,7 @@ void set_input_text(uint8_t inp, char * text_t){
  		unsigned int adc_value;
  			adc_value = ADC_read(input[input_t - 1].adc_channel); // измерение со входа
 #ifdef DEBUG_INPUTS_ADC
- 			send_string_to_UART3("INPUT:");
+ 			send_string_to_UART3("\n\rINPUT:");
  			send_int_to_UART3(input_t);
  			send_string_to_UART3(" Value:");
  			send_int_to_UART3(adc_value);
@@ -129,7 +128,6 @@ void set_input_text(uint8_t inp, char * text_t){
 			send_int_to_UART3((input[input_t - 1].v_min)*300);
 			send_string_to_UART3(" Max:");
 			send_int_to_UART3(input[input_t - 1].v_max*300);
- 			send_string_to_UART3(" \n\r");
 #endif
  			if (((((input[input_t - 1].v_max*300*u_coef/100) > adc_value) && ((input[input_t - 1].v_min)*300*u_coef/100) < adc_value) ^ !(check_input_setting((input_t-1),INPUTS_MODE_INVERS)>0)) ){//вход не в норме
  				return 1;
@@ -151,9 +149,9 @@ void set_input_text(uint8_t inp, char * text_t){
  		if (check_input(i+1)){
  			if (!input[i].state){
  #ifdef DEBUG_INPUTS
- 	send_string_to_UART3("INPUT ");
+ 	send_string_to_UART3("\n\r INPUT ");
  	send_int_to_UART3(i);
- 	send_string_to_UART3(": ALERT!  \n\r");
+ 	send_string_to_UART3(": ALERT!");
  #endif
  				out_on_mode(i+1);
  				if (!input[i].state){
@@ -180,9 +178,9 @@ void set_input_text(uint8_t inp, char * text_t){
  					return;
  				}
  #ifdef DEBUG_INPUTS
- 	send_string_to_UART3("INPUT ");
+ 	send_string_to_UART3("\n\r INPUT ");
  	send_int_to_UART3(i);
- 	send_string_to_UART3(": NORMAL!  \n\r");
+ 	send_string_to_UART3(": NORMAL!");
  #endif
  			}
  		}
@@ -199,11 +197,10 @@ void set_input_text(uint8_t inp, char * text_t){
 	 for (i = 0;i< MAX_INPUT;i++){
  		if (input[i].time_to_alarm > 0) {
 #ifdef DEBUG
- 		 	send_string_to_UART3("INPUT #");
- 		 	send_int_to_UART3(i);
+ 		 	send_string_to_UART3("\n\r INPUT #");
+ 		 	send_int_to_UART3((i+1));
  		 	send_string_to_UART3(" TIME TO ALARM : ");
  		 	send_int_to_UART3(input[i].time_to_alarm);
- 		 	send_string_to_UART3("\n\r");
 #endif
  		 	input[i].time_to_alarm--;
  		}

@@ -66,12 +66,11 @@ void read_numbers(){
 			}
 			tel[i].number[10] = 0;
 			#ifdef DEBUG_READ_SETTINGS
-				send_string_to_UART3("READ NUMBER: ");
+				send_string_to_UART3("\n\rREAD NUMBER: ");
 				send_string_to_UART3(tel[i].number);
 				send_string_to_UART3(" Dost: ");
 				if ((tel[i].access >= 0) & (tel[i].access <10)) send_int_to_UART3(tel[i].access);
 				else send_char_to_UART3(tel[i].access);
-				send_string_to_UART3(" \n\r");
 			#endif
 		}else{
 			tel[i].access = TEL_ACCESS_OFF;
@@ -143,7 +142,6 @@ void MODEM_ON(){
 		if (send_command_to_GSM("AT","OK",gsm_message,10,30)){
 #ifdef DEBUG_MODEM
 	send_string_to_UART3("\n\rMODEM: ON OK ");
-	send_string_to_UART3(" \n\r");
 #endif
 			modem_state = MODEM_STATE_ON;
 		}
@@ -152,8 +150,7 @@ void MODEM_ON(){
 
 void MODEM_OFF(){
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("MODEM: OFF? ");
-	send_string_to_UART3(" \n\r");
+	send_string_to_UART3("\n\rMODEM: OFF? ");
 #endif
 	modem_time_on = 0;
 	check_gsm_message();
@@ -166,8 +163,7 @@ void MODEM_OFF(){
 		while_timeout_7();
 		if (!send_command_to_GSM("AT","OK",gsm_message,2,16)){
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("MODEM: OFF OK ");
-	send_string_to_UART3(" \n\r");
+	send_string_to_UART3("\n\rMODEM: OFF OK ");
 #endif
 			modem_state = MODEM_STATE_NOT_NEED;
 		}
@@ -217,8 +213,8 @@ char get_next_gsm_message(){
 
 	if (gsm_message[0]){
 #ifdef DEBUG_MODEM_UART
-		send_string_to_UART3(gsm_message);
 		send_string_to_UART3(" \n\r");
+		send_string_to_UART3(gsm_message);
 #endif
 		return OK_ANSWER;
 	}
@@ -254,9 +250,8 @@ char parse_gsm_message(){
 			gsm_signal_quality = (gsm_message[6] - 48) * 10 + (gsm_message[7] - 48);
 		}
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("MODEM : QUALITY = ");
+	send_string_to_UART3("\r\nMODEM : QUALITY = ");
 	send_int_to_UART3(gsm_signal_quality);
-	send_string_to_UART3(" \n\r");
 //	alarm_on();
 #endif
 		if (tel[0].access){
@@ -276,8 +271,7 @@ char parse_gsm_message(){
 		}
 		if (find_str("NOT INSERTED",gsm_message)){
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("MODEM: SIM NOT INSERTED");
-	send_string_to_UART3(" \n\r");
+	send_string_to_UART3("\r\nMODEM: SIM NOT INSERTED");
 #endif
 			modem_state = MODEM_STATE_NO_SIM;
 			return_gsm_message = GSM_MESSAGE_NO_SIM;
@@ -288,9 +282,8 @@ char parse_gsm_message(){
 	else if (find_str("+COPS:",gsm_message)){///////////////////////////////// ONLINE GET OPERATOR
 		if (str_length(gsm_message) > 15) { ///////////////////////////////// OPERATOR GET OK
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("MODEM: ");
+	send_string_to_UART3("\r\nMODEM: ");
 	send_string_to_UART3(gsm_message);
-	send_string_to_UART3(" \n\r");
 #endif
 			modem_state = MODEM_STATE_SETUP;
 		}else{								///////////////////////////////// OPERATOR FAILED
@@ -300,8 +293,7 @@ char parse_gsm_message(){
 
 	else if (find_str("BUSY",gsm_message)){  ///////////////////////////////// LINE BUSY
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("MODEM: CALL BUSY ");
-	send_string_to_UART3(" \n\r");
+	send_string_to_UART3("\r\nMODEM: CALL BUSY ");
 #endif
 			modem_call_state = CALL_STATE_BUSY;
 			modem_free();
@@ -310,8 +302,7 @@ char parse_gsm_message(){
 
 	else if (find_str("NO ANSWER",gsm_message)){///////////////////////////////// NO ANSWER
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("MODEM: CALL NO ANSWER ");
-	send_string_to_UART3(" \n\r");
+	send_string_to_UART3("\r\nMODEM: CALL NO ANSWER ");
 #endif
 			modem_call_state = CALL_STATE_NO_ANSWER;
 				modem_free();
@@ -321,9 +312,8 @@ char parse_gsm_message(){
 	else if(find_str("NO CARRIER",gsm_message)){ ///////////////////////////////// NO CARRIER
 		modem_no_carrier();
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("MODEM : NO CARRIER = ");
+	send_string_to_UART3("\r\nMODEM : NO CARRIER = ");
 	send_int_to_UART3(modem_errors[MODEM_ERRORS_NO_CARRIER]);
-	send_string_to_UART3(" \n\r");
 #endif
 	}else if(find_str("+CLIP:",gsm_message)){  ///////////////////////////////// INCOMING CALL
 		incoming_call();
@@ -399,12 +389,12 @@ char modem_setup(){
 	send_command_to_GSM("AT+CMGD=1,4","OK",gsm_message,2,5);
 	led_blink_stop(OUT_MODE_GSM);
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("MODEM: setup ok!  \n\r");
+	send_string_to_UART3("\r\nMODEM: setup ok!");
 #endif
 	if (!tel[0].access){
 		led_blink(OUT_MODE_GSM,20,10);
 #ifdef DEBUG_MODEM
-		send_string_to_UART3("MODEM: Vnimanie nety osnovnogo nomera! \n\r ");
+		send_string_to_UART3("\r\nMODEM: Vnimanie nety osnovnogo nomera!");
 #endif
 	}
 
@@ -555,14 +545,13 @@ void modem_save_number(char ID_number,char * number,uint8_t acc){
 	tel[ID_number].access = acc;
 	EEPROMWrite((EEPROM_tel_access + ID_number),acc,1);
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("MODEM : Save number! ID:  ");
+	send_string_to_UART3("\r\nMODEM : Save number! ID:  ");
 	send_int_to_UART3(ID_number);
 	send_string_to_UART3(" Number: ");
 	send_string_to_UART3(number);
 	send_string_to_UART3(" Access: ");
 	if ((acc >= 0) & (acc <10)) send_int_to_UART3(acc);
 	else send_char_to_UART3(acc);
-	send_string_to_UART3(" \n\r");
 #endif
 }
 

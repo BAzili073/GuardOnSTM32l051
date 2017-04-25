@@ -12,7 +12,7 @@
 
 void FULL_RESET(){
 #ifdef DEBUG
-	send_string_to_UART3("FULL RESET \n\r");
+	send_string_to_UART3("\r\nFULL RESET");
 #endif
 	NVIC_SystemReset();
 }
@@ -20,7 +20,7 @@ void FULL_RESET(){
 
 void FULL_ERASE_DEVICE(){
 #ifdef DEBUG
-	send_string_to_UART3("SYSTEM: FULL ERASE AND RESET DEVICE!!! \n\r");
+	send_string_to_UART3("\r\nSYSTEM: FULL ERASE AND RESET DEVICE!!!");
 #endif
 	ERASE_EEPROM();
 	FULL_RESET();
@@ -42,7 +42,7 @@ void EXTI15_10_IRQHandler(){
 
 int main(void) {
 
-//  	SCB->SHCSR |= SCB_SHCSR_BUSFAULTENA;
+//  SCB->SHCSR |= SCB_SHCSR_BUSFAULTENA;
 //	SCB->SHCSR |= SCB_SHCSR_MEMFAULTENA;
 //	SCB->SHCSR |= SCB_SHCSR_USGFAULTENA;
 	set_core_clock();
@@ -67,7 +67,7 @@ int main(void) {
 
 	modem_online();
 #ifdef DEBUG
-	send_string_to_UART3("START PROGTAMM! \n\r");
+	send_string_to_UART3("\r\nSTART PROGTAMM!");
 #endif
 
 	if (check_device_setting(DEVICE_SETTING_AUTO_GUARD_AT_START)){
@@ -77,7 +77,10 @@ int main(void) {
 
 
 		str_add_str(output_sms_message,sizeof(output_sms_message),"zapusk",0);
-		str_add_str(output_sms_message,sizeof(output_sms_message),"\nver:5.1 24.01.17",0);
+		str_add_str(output_sms_message,sizeof(output_sms_message),"\nver:",0);
+		str_add_str(output_sms_message,sizeof(output_sms_message),CODE_VERSION,0);
+		str_add_str(output_sms_message,sizeof(output_sms_message)," ",0);
+		str_add_str(output_sms_message,sizeof(output_sms_message),CODE_DATA,0);
 		str_add_str(output_sms_message,sizeof(output_sms_message),"\nur:",0);
 		str_add_num(output_sms_message,(get_gsm_signal_quality()*100/31));
 		str_add_str(output_sms_message,sizeof(output_sms_message),"%\nkl: ",0);

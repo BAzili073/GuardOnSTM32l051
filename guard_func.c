@@ -25,6 +25,7 @@ uint8_t new_guard_st;
 uint8_t u_220V = 140;
 uint8_t u_batt = 130;
 uint8_t u_coef = 100;
+uint16_t input_coef = 100;
 uint8_t powered = POWERED_220V;
 uint8_t device_settings = 0b00000000;
 uint8_t time_set_alarm = 6;
@@ -68,9 +69,9 @@ void set_time_to_reset(uint8_t day){
 	time_to_full_reset = day;
 	if (!day) day = 0xFE;
 	EEPROMWrite(EEPROM_time_to_reset,day,1);
-	send_string_to_UART3("Device: Time to full reset set each: ");
+	send_string_to_UART3("\n\rDevice: Time to full reset set each: ");
 	send_int_to_UART3(day);
-	send_string_to_UART3(" days");
+	send_string_to_UART3(" hours");
 }
 
 void setting_time_to_report(uint8_t hour){
@@ -83,7 +84,7 @@ void setting_time_to_report(uint8_t hour){
 		time_to_report = set_time_to_report;
 	}
 #ifdef DEBUG
-	send_string_to_UART3("Device: Time to report set each: ");
+	send_string_to_UART3("\n\rDevice: Time to report set each: ");
 	send_int_to_UART3(hour);
 	send_string_to_UART3(" hours");
 #endif
@@ -116,36 +117,35 @@ void set_device_setting(uint8_t settings, uint8_t time_to_guard_t, uint8_t time_
 	time_to_guard_on = time_to_guard_t; EEPROMWrite(EEPROM_time_to_guard,time_to_guard_t,1);
 	time_set_alarm = time_alarm_t; EEPROMWrite(EEPROM_time_set_alarm,time_alarm_t,1);
 #ifdef DEBUG
-	send_string_to_UART3("Device: Set setting device! Settings: \n\r");
-	send_string_to_UART3("DEVICE_SETTING_SMS_AT_NOT_220: ");
-	check_device_setting(DEVICE_SETTING_SMS_AT_NOT_220) ? send_string_to_UART3("ON \n\r") : send_string_to_UART3("OFF \n\r");
+	send_string_to_UART3("\n\rDevice: Set setting device! Settings:");
+	send_string_to_UART3("\n\rDEVICE_SETTING_SMS_AT_NOT_220: ");
+	check_device_setting(DEVICE_SETTING_SMS_AT_NOT_220) ? send_string_to_UART3("ON") : send_string_to_UART3("OFF");
 
-	send_string_to_UART3("AUTO_GUARD_AT_START: ");
-	check_device_setting(DEVICE_SETTING_AUTO_GUARD_AT_START) ? send_string_to_UART3("ON \n\r") : send_string_to_UART3("OFF \n\r");
+	send_string_to_UART3("\n\rAUTO_GUARD_AT_START: ");
+	check_device_setting(DEVICE_SETTING_AUTO_GUARD_AT_START) ? send_string_to_UART3("ON") : send_string_to_UART3("OFF");
 
-	send_string_to_UART3("SMS_AT_ALARM: ");
-	check_device_setting(DEVICE_SETTING_SMS_AT_ALARM) ? send_string_to_UART3("ON \n\r") : send_string_to_UART3("OFF \n\r");
+	send_string_to_UART3("\n\rSMS_AT_ALARM: ");
+	check_device_setting(DEVICE_SETTING_SMS_AT_ALARM) ? send_string_to_UART3("ON") : send_string_to_UART3("OFF");
 
-	send_string_to_UART3("CHANGE_GUARD_USE_CALL: ");
-	check_device_setting(DEVICE_SETTING_CHANGE_GUARD_USE_CALL) ? send_string_to_UART3("ON \n\r") : send_string_to_UART3("OFF \n\r");
+	send_string_to_UART3("\n\rCHANGE_GUARD_USE_CALL: ");
+	check_device_setting(DEVICE_SETTING_CHANGE_GUARD_USE_CALL) ? send_string_to_UART3("ON") : send_string_to_UART3("OFF");
 
-	send_string_to_UART3("BAN_OUTPUT_CALL: ");
-	check_device_setting(DEVICE_SETTING_BAN_OUTPUT_CALL) ? send_string_to_UART3("ON \n\r") : send_string_to_UART3("OFF \n\r");
+	send_string_to_UART3("\n\rBAN_OUTPUT_CALL: ");
+	check_device_setting(DEVICE_SETTING_BAN_OUTPUT_CALL) ? send_string_to_UART3("ON") : send_string_to_UART3("OFF");
 
-	send_string_to_UART3("SMS_AT_SMS_COMMAND: ");
-	check_device_setting(DEVICE_SETTING_SMS_AT_SMS_COMMAND) ? send_string_to_UART3("ON \n\r") : send_string_to_UART3("OFF \n\r");
+	send_string_to_UART3("\n\rSMS_AT_SMS_COMMAND: ");
+	check_device_setting(DEVICE_SETTING_SMS_AT_SMS_COMMAND) ? send_string_to_UART3("ON") : send_string_to_UART3("OFF");
 
-	send_string_to_UART3("SMS_AT_CHANGE_GUARD: ");
-	check_device_setting(DEVICE_SETTING_SMS_AT_CHANGE_GUARD) ? send_string_to_UART3("ON \n\r") : send_string_to_UART3("OFF \n\r");
+	send_string_to_UART3("\n\rSMS_AT_CHANGE_GUARD: ");
+	check_device_setting(DEVICE_SETTING_SMS_AT_CHANGE_GUARD) ? send_string_to_UART3("ON") : send_string_to_UART3("OFF");
 
-	send_string_to_UART3("SMS_AT_STARTUP: ");
-	check_device_setting(DEVICE_SETTING_SMS_AT_STARTUP) ? send_string_to_UART3("ON \n\r") : send_string_to_UART3("OFF \n\r");
+	send_string_to_UART3("\n\rSMS_AT_STARTUP: ");
+	check_device_setting(DEVICE_SETTING_SMS_AT_STARTUP) ? send_string_to_UART3("ON") : send_string_to_UART3("OFF");
 
-	send_string_to_UART3("\n\r Time to guard: ");
+	send_string_to_UART3("\n\rTime to guard: ");
 	send_int_to_UART3(time_to_guard_t);
-	send_string_to_UART3(" Time alarm: ");
+	send_string_to_UART3("\n\rTime alarm: ");
 	send_int_to_UART3(time_alarm_t);
-	send_string_to_UART3(" \n\r ");
 #endif
 }
 
@@ -159,7 +159,7 @@ void guard_on(){
 		out_on_mode(OUT_MODE_GUARD);
 		changed_guard_sms(GUARD_ON);
 #ifdef DEBUG_GUARD
-	send_string_to_UART3("GUARD: ON! \n\r");
+	send_string_to_UART3("\n\rGUARD: ON!");
 #endif
 }
 
@@ -186,7 +186,7 @@ void guard_off(){
 	clear_alarm_input();
 	changed_guard_sms(GUARD_OFF);
 #ifdef DEBUG_GUARD
-	send_string_to_UART3("GUARD: OFF! \n\r");
+	send_string_to_UART3("\n\rGUARD: OFF!");
 #endif
 }
 
@@ -226,7 +226,7 @@ void alarm_off(){
 		out_off_mode(OUT_MODE_LAMP);
 		alarm_st = ALARM_OFF;
 #ifdef DEBUG_GUARD
-	send_string_to_UART3("ALAAAAARM: OFF! \n\r");
+	send_string_to_UART3("\n\rALAAAAARM: OFF!");
 #endif
 }
 
@@ -247,16 +247,15 @@ void check_battery(){
 	u_coef =  U * 100 / u_220V;
 	if (u_coef>100) u_coef = 100;
 #ifdef DEBUG_220V
-	send_string_to_UART3("DETECT 220v: ");
+	send_string_to_UART3("\n\rDETECT 220v: ");
 	send_int_to_UART3(U);
-	send_string_to_UART3(" \n\r");
 #endif
 
 	if ((U < (u_batt + ((u_220V - u_batt)*0.2))) && (powered == POWERED_220V)){
 
 		if (NOT_220_TRY == 200){
 #ifdef DEBUG
-	send_string_to_UART3("POWER: BATTARY ON!!\n\r");
+	send_string_to_UART3("\n\rPOWER: BATTARY ON!!");
 #endif
 					NOT_220_TRY++;
 					powered = POWERED_BATTERY;
@@ -291,7 +290,7 @@ void check_battery(){
 			send_sms_message_for_all(output_sms_message,SMS_FUNCTION_SERVICE);
 		}
 #ifdef DEBUG
-	send_string_to_UART3("POWER: 220V ON!! \n\r");
+	send_string_to_UART3("\n\rPOWER: 220V ON!!");
 #endif
 	}
 
@@ -315,11 +314,10 @@ void setting_powered(uint8_t step){
 		EEPROMWrite(EEPROM_POWER_BATT,U_V,1);
 	}
 #ifdef DEBUG
-	send_string_to_UART3("POWER: SET 220V (V): ");
+	send_string_to_UART3("\n\rPOWER: SET 220V (V): ");
 	send_int_to_UART3(u_220V);
 	send_string_to_UART3("POWER: SET BATT (V): ");
 	send_int_to_UART3(u_batt);
-	send_string_to_UART3("\n\r");
 #endif
 }
 

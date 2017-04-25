@@ -39,21 +39,19 @@ void parse_incoming_sms(){
 	if (last_control_ID_number > MAX_TEL_NUMBERS) return;
 	sms_ucs_to_eng(gsm_message, input_sms_message);
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("INCOMING SMS! NUMBER: ");
+	send_string_to_UART3("\r\nINCOMING SMS! NUMBER: ");
 	send_string_to_UART3(tel_number_temp);
 	send_string_to_UART3(" ID: ");
 	send_int_to_UART3(last_control_ID_number);
 	send_string_to_UART3(" \n\r");
 	send_string_to_UART3(" SMS: ");
 	send_string_to_UART3(input_sms_message);
-	send_string_to_UART3(" \n\r");
 #endif
 	while(get_next_command_from_sms(input_sms_message,command_str,command_count)){
 		command_count++;
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("Progessing command: ");
+	send_string_to_UART3("\r\nProgessing command: ");
 	send_string_to_UART3(command_str);
-	send_string_to_UART3("\n\r");
 #endif
 		switch(command_str[0]){
 	//nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn

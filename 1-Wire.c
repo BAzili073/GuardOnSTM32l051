@@ -237,7 +237,7 @@ uint8_t one_wire_start_conversion_temp(){
 	if (one_wire_skip()) { // ≈сли у нас на шине кто-то присутствует,...
 	      one_wire_write_byte(0x44);
 #ifdef DEBUG_DS18x20
-	    send_string_to_UART3("Start conversion! \n\r");
+	    send_string_to_UART3("\n\rStart conversion!");
 #endif
 //	      for (uint8_t i=0;i<100;i++){
 //			  set_timeout(10000);
@@ -361,7 +361,7 @@ uint8_t one_wire_check_keys(){
 	int counter = 0;
 	if  (!one_wire_level()) {
 #ifdef DEBUG
-	  send_string_to_UART3("KZ on line TM!!!\n\r");
+	  send_string_to_UART3("\n\rKZ on line TM!!!");
 #endif
 		return ONE_WIRE_KEY_DENY;
 	}
@@ -375,7 +375,7 @@ uint8_t one_wire_check_keys(){
 	        if (counter > 64) {
 	        	//KZS
 #ifdef DEBUG
-	  send_string_to_UART3("KZ on line TM!!!");
+	  send_string_to_UART3("\n\rKZ on line TM!!!");
 #endif
 	        	break;
 	        }
@@ -454,11 +454,14 @@ void one_wire_add_device(){
 	send_char_to_UART3('C');
 #endif
 	        } else {
-	          if ((family_code == 0x01) || (family_code == 0x01) || (family_code == 0x01)) { //if this tm key
+	          if ((family_code == 0x01) || (family_code == 0x89) || (family_code == 0x01)) { //if this tm key
 	        	  if (find_key(key) == ONE_WIRE_KEY_DENY){
 	        		  add_TM_key(key);
 	        	  }else{
 	        		  led_on(3);
+#ifdef DEBUG
+		send_string_to_UART3("\n\r TM: Key already exist!");
+#endif
 	        	  }
 	        	  set_timeout_7(5);
 	        	  while_timeout_7();

@@ -53,11 +53,10 @@ char modem_send_sms_message(char * number,char * text){
 	send_char_to_GSM(0x1a);
 #else
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("MODEM: SEND SMS! NUMBER:  ");
+	send_string_to_UART3("\n\r MODEM: SEND SMS! NUMBER:  ");
 	send_string_to_UART3(number);
 	send_string_to_UART3(" TEXT: ");
 		send_string_to_UART3(text);
-	send_string_to_UART3(" \n\r");
 #endif
 	send_string_to_GSM("AT+CMGS=");
 	send_int_to_GSM(((str_length(text) * 2)+13));
@@ -83,8 +82,7 @@ char modem_send_sms_message(char * number,char * text){
 	 if (!send_command_to_GSM("","+CMGS:",gsm_message,5,200)) {
 
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("MODEM: SEND SMS ERROR!");
-	send_string_to_UART3(" \n\r");
+	send_string_to_UART3("\n\r MODEM: SEND SMS ERROR!");
 #endif
 
 		 modem_free();
@@ -93,7 +91,7 @@ char modem_send_sms_message(char * number,char * text){
 	 }
 #endif
 #ifdef DEBUG_MODEM
-	send_string_to_UART3("MODEM: SEND SMS OK! \n\r");
+	send_string_to_UART3("\n\r MODEM: SEND SMS OK!");
 #endif
 	modem_errors[MODEM_ERRORS_SEND_SMS] = 0;
 	 modem_free();
