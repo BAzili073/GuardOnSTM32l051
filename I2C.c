@@ -5,7 +5,7 @@
 #define I2C_SCL_PORT GPIOB
 #define I2C_SDA_PIN GPIO_PIN_7
 #define I2C_SDA_PORT GPIOB
-#define I2C1_OWN_ADDRESS 0xAA
+#define I2C1_OWN_ADDRESS 0x50
 
 void I2C_Init(){
 	GPIO_InitTypeDef initSrtuct;
@@ -80,29 +80,22 @@ void I2C_Init(){
 }
 
 void I2C_MASTER_TRACSMITTED(){
+    //Reset CR2 Register
+    I2C1->CR2 = 0x00000000;
 
-	if((I2C1->ISR & I2C_ISR_TXE) == (I2C_ISR_TXE))
-	{
-	I2C1->TXDR = 0xCC; /* Byte to send */
-	I2C1->CR2 |= I2C_CR2_START; /* Go */
-	}
+    //Check to see if the bus is busy
+    while((I2C1->ISR & I2C_ISR_BUSY) == I2C_ISR_BUSY);
 
-//    //Reset CR2 Register
-//    I2C1->CR2 = 0x00000000;
-//
-//    //Check to see if the bus is busy
-//    while((I2C1->ISR & I2C_ISR_BUSY) == I2C_ISR_BUSY);
-//
-//    //Set CR2 for 2-Byte Transfer, for Device
-//    I2C1->CR2 |= (1<<16) | (I2C1_OWN_ADDRESS<<1);
-//
-//    //Start communication
-//    I2C1->CR2 |= I2C_CR2_START;
-//
-//    //Check Tx empty before writing to it
-//    if((I2C1->ISR & I2C_ISR_TXE) == (I2C_ISR_TXE)){
-//        I2C1->TXDR = 0xAA;
-//    }
+    //Set CR2 for 2-Byte Transfer, for Device
+    I2C1->CR2 |= (1<<16) | (I2C1_OWN_ADDRESS<<1);
+
+    //Start communication
+    I2C1->CR2 |= I2C_CR2_START;
+
+    //Check Tx empty before writing to it
+    if((I2C1->ISR & I2C_ISR_TXE) == (I2C_ISR_TXE)){
+        I2C1->TXDR = 0xAA;
+    }
 //
 //    //Wait for transfer to complete
 //    while((I2C1->ISR & I2C_ISR_TC) == 0);
