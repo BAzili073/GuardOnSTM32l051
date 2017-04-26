@@ -159,6 +159,18 @@ void send_num_to_UART3(uint32_t num){
 	}
 }
 
+void send_num_to_UART3_as_hex(uint32_t num){
+	if(num > 0){
+		send_num_to_UART3_as_hex(num / 0x10);
+		if((num % 0x10)<9)
+			send_char_to_UART3((num % 0x10) + '0');
+		else
+			send_char_to_UART3((num % 0x10) - 10 + 'A');
+		}
+}
+
+
+
 void send_int_to_UART3(uint32_t num){
 if(num > 0){
 	send_num_to_UART3(num);
