@@ -1,28 +1,9 @@
 #include "I2C.h"
 
 #define I2C_PORT I2C1
-#define I2C_SCL_PIN GPIO_PIN_6
-#define I2C_SCL_PORT GPIOB
-#define I2C_SDA_PIN GPIO_PIN_7
-#define I2C_SDA_PORT GPIOB
 #define I2C1_OWN_ADDRESS 0x50
 
-void I2C_Init(){
-	GPIO_InitTypeDef initSrtuct;
-
-	initSrtuct.Alternate = GPIO_AF1_I2C1;
-	initSrtuct.Mode = GPIO_MODE_AF_OD;
-	initSrtuct.Pull = GPIO_PULLUP;
-	initSrtuct.Pin = I2C_SCL_PIN;
-	initSrtuct.Speed = GPIO_SPEED_HIGH;
-	HAL_GPIO_Init(I2C_SCL_PORT, &initSrtuct);
-
-	initSrtuct.Alternate = GPIO_AF1_I2C1;
-	initSrtuct.Mode = GPIO_MODE_AF_OD;
-	initSrtuct.Pull = GPIO_PULLUP;
-	initSrtuct.Pin = I2C_SDA_PIN;
-	initSrtuct.Speed = GPIO_SPEED_HIGH;
-	HAL_GPIO_Init(I2C_SDA_PORT, &initSrtuct);
+void I2C_Init_(){
 
 	RCC->APB1ENR |= RCC_APB1ENR_I2C1EN;
 

@@ -71,6 +71,21 @@ void GPIO_init(){
 		initSrtuct.Speed = GPIO_SPEED_HIGH;
 		HAL_GPIO_Init( UART3_PORT, &initSrtuct);
 
+		/////////////////////////////////////////////////////////////////////I2C1
+		initSrtuct.Alternate = GPIO_AF1_I2C1;
+		initSrtuct.Mode = GPIO_MODE_AF_OD;
+		initSrtuct.Pull = GPIO_PULLUP;
+		initSrtuct.Pin = I2C_SCL_PIN;
+		initSrtuct.Speed = GPIO_SPEED_HIGH;
+		HAL_GPIO_Init(I2C_SCL_PORT, &initSrtuct);
+
+		initSrtuct.Alternate = GPIO_AF1_I2C1;
+		initSrtuct.Mode = GPIO_MODE_AF_OD;
+		initSrtuct.Pull = GPIO_PULLUP;
+		initSrtuct.Pin = I2C_SDA_PIN;
+		initSrtuct.Speed = GPIO_SPEED_HIGH;
+		HAL_GPIO_Init(I2C_SDA_PORT, &initSrtuct);
+
 
 		/////////////////////////////////////////////////////////////////LEDS
 		initSrtuct.Alternate = 0;
