@@ -5,7 +5,7 @@
 #include INCLUDED_FILE_1
 #include INCLUDED_FILE_2
 
-
+void I2C_Init();
 
 
 #endif
