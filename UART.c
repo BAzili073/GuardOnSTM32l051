@@ -50,6 +50,9 @@ void UART2_init(){
 	huart2.Init.OverSampling = UART_OVERSAMPLING_16;
 	HAL_UART_Init(&huart2);
 	USART2->CR1 |= USART_CR1_RXNEIE ;
+	USART2 -> CR1 &= ~USART_CR1_UE;
+	USART2->CR2 |= USART_CR2_SWAP;
+	USART2 -> CR1 |= USART_CR1_UE;
 }
 
 void UART3_init(){
