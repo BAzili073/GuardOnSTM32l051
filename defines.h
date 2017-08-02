@@ -10,8 +10,8 @@
 #define INCLUDED_FILE_2 "stm32l0xx.h"
 
 
-#define CODE_VERSION "6.2"
-#define CODE_DATA "24.04.17"
+#define CODE_VERSION "6.3"
+#define CODE_DATA "02.08.17"
 //#define DEBUG_FINGER
 #define DEBUG_MODEM
 #define DEBUG_READ_SETTINGS
@@ -210,7 +210,8 @@
 
 #define UUID_1  21443637
 #define UUID_2 842085689
-#define UUID_3 1701144064
+#define UUID_3 1482184448
+
 
 /*
  * 4096 EEPROM all

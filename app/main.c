@@ -51,41 +51,41 @@ int main(void) {
 	TIM6_init();
 	TIM21_init();
 	ADC_init();
-////    TIM2_init(); //PWM
+    TIM2_init(); //PWM
 ////	TIM7_init();
 	UART1_init();
 	UART2_init();
 	UART3_init();
-
-//
+//	ERASE_EEPROM();
+////////////////////////TEST I2C
 ////	GPIO_interrupt_init();
 //	ERASE_EEPROM();
 //
-	uint32_t reg0;
-	uint32_t reg1;
-	uint32_t reg2;
-	uint32_t reg3;
-	send_string_to_UART3("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-	I2C_Init();
-	set_timeout_7(10);
-	while_timeout_7();
-	while(1){
-		I2C_MASTER_TRACSMITTED();
-//		reg0 = (GPIOB -> IDR);
-//		reg1 = (GPIOB -> IDR) & GPIO_PIN_9;
-//		reg2 = (GPIOB -> IDR) & GPIO_PIN_8;
-//		reg3 = I2C1 -> ISR;
-//
-//		send_string_to_UART3("\n\rreg0 = ");
-//		send_num_to_UART3_as_hex(reg0);
-//		send_string_to_UART3("\n\rreg1 = ");
-//				send_num_to_UART3_as_hex(reg1);
-//				send_string_to_UART3("\n\rreg2 = ");
-//						send_num_to_UART3_as_hex(reg2);
-//						send_string_to_UART3("\n\rreg3 = ");
-//								send_num_to_UART3_as_hex(reg3);
-	}
-
+//	uint32_t reg0;
+//	uint32_t reg1;
+//	uint32_t reg2;
+//	uint32_t reg3;
+//	send_string_to_UART3("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+//	I2C_Init();
+//	set_timeout_7(10);
+//	while_timeout_7();
+//	while(1){
+//		I2C_MASTER_TRACSMITTED();
+////		reg0 = (GPIOB -> IDR);
+////		reg1 = (GPIOB -> IDR) & GPIO_PIN_9;
+////		reg2 = (GPIOB -> IDR) & GPIO_PIN_8;
+////		reg3 = I2C1 -> ISR;
+////
+////		send_string_to_UART3("\n\rreg0 = ");
+////		send_num_to_UART3_as_hex(reg0);
+////		send_string_to_UART3("\n\rreg1 = ");
+////				send_num_to_UART3_as_hex(reg1);
+////				send_string_to_UART3("\n\rreg2 = ");
+////						send_num_to_UART3_as_hex(reg2);
+////						send_string_to_UART3("\n\rreg3 = ");
+////								send_num_to_UART3_as_hex(reg3);
+//	}
+////////////////////////////////
 
 
 

@@ -260,12 +260,10 @@ void check_battery(){
 					NOT_220_TRY++;
 					powered = POWERED_BATTERY;
 					out_on_mode(OUT_MODE_220V);
-					uint8_t u_min = u_220V - 40;
 					set_timeout_7(30);
 					while_timeout_7();
-					U_adc =ADC_read(DET_220_CHANNEL);
-					uint8_t proc = ((U - u_min)*100 / (u_batt-u_min));
-					if (proc > 100) proc = 100;
+
+					uint8_t proc = get_batt_status();
 					if (check_device_setting(DEVICE_SETTING_SMS_AT_NOT_220)){
 						str_add_str(output_sms_message,sizeof(output_sms_message),"vnimanie! otkaz 220v!",0);
 						str_add_str(output_sms_message,sizeof(output_sms_message),"\n",0);
@@ -426,4 +424,13 @@ int checkValidCode(int Step){
 #endif
 	}
 	return valid;
+}
+
+uint8_t get_batt_status(){
+	uint8_t u_min = u_220V - 40;
+	unsigned int U_adc =ADC_read(DET_220_CHANNEL);
+	unsigned int U = U_adc*181.5/4096;
+	uint8_t proc = ((U - u_min)*100 / (u_batt-u_min));
+	if (proc > 100) proc = 100;
+	return proc;
 }

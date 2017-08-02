@@ -99,3 +99,8 @@ void control_out_by_id_and_mode(uint8_t output_t,uint8_t mode,uint8_t state){
 		state ? output_on(output_t) : output_off(output_t);
 	}
 }
+
+char check_output(uint8_t out){
+	if (GPIO_READ(output[out-1].port,(output[out-1].pin))) return 1;
+	else return 0;
+}

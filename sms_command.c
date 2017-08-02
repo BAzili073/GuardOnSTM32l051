@@ -17,7 +17,6 @@
 
 extern TEL_obj tel[MAX_TEL_NUMBERS];
 
-
 void sms_command_nn(char * command_str);
 void sms_command_r();
 extern char tel_number_temp[10];
@@ -150,6 +149,9 @@ void parse_incoming_sms(){
 	//rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
 			case 'r':
 				//r
+				if (command_str[1] == 'r'){
+					sms_command_rr();
+				}else
 					sms_command_r();
 			break;
 	//bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
@@ -255,19 +257,40 @@ void sms_command_r(){
 		str_add_str(output_sms_message,sizeof(output_sms_message),"\n",0);
 		str_add_str(output_sms_message,sizeof(output_sms_message),"vQh:",0);
 		for (i = 1;i<6;i++) {
-		//	a[0] = ('1' - (GPIO_READ((outputs_port[(i-1)]),(output[i-1].pin))*2));
+			a[0] = ('0' + check_output(i));
 			str_add_str(output_sms_message,sizeof(output_sms_message),a,1);
 		}
 		str_add_str(output_sms_message,sizeof(output_sms_message),"\n",0);
-		str_add_str(output_sms_message,sizeof(output_sms_message),"temp:",0);
-		for (i = 0;i < get_DS18x20_count();i++){
-			int16_t tp = get_last_temp_DS18x20_by_number(i);
-			if (tp == ONE_WIRE_CONVERSION_ERROR) str_add_str(output_sms_message,sizeof(output_sms_message),"?",0);
-			else str_add_num(output_sms_message,tp);
-			str_add_str(output_sms_message,sizeof(output_sms_message),";",0);
+		if (get_DS18x20_count() > 0){
+			str_add_str(output_sms_message,sizeof(output_sms_message),"temp:",0);
+			for (i = 0;i < get_DS18x20_count();i++){
+				int16_t tp = get_last_temp_DS18x20_by_number(i);
+				if (tp == ONE_WIRE_CONVERSION_ERROR) str_add_str(output_sms_message,sizeof(output_sms_message),"?",0);
+				else str_add_num(output_sms_message,tp);
+				str_add_str(output_sms_message,sizeof(output_sms_message),";",0);
+			}
+			str_add_str(output_sms_message,sizeof(output_sms_message),"\n",0);
 		}
-		str_add_str(output_sms_message,sizeof(output_sms_message),"\n",0);
 		if (get_powered() == POWERED_220V) str_add_str(output_sms_message,sizeof(output_sms_message),"220v",0);
 		else str_add_str(output_sms_message,sizeof(output_sms_message),"akkum!",0);
+		send_sms_message_for_all(output_sms_message,SMS_FUNCTION_SERVICE);
+}
+
+
+void sms_command_rr(){
+		str_add_str(output_sms_message,sizeof(output_sms_message),"ver:",0);
+		str_add_str(output_sms_message,sizeof(output_sms_message),CODE_VERSION,0);
+		str_add_str(output_sms_message,sizeof(output_sms_message)," ",0);
+		str_add_str(output_sms_message,sizeof(output_sms_message),CODE_DATA,0);
+		str_add_str(output_sms_message,sizeof(output_sms_message),"\nsetB:",0);
+		if (get_powered() == POWERED_220V) str_add_str(output_sms_message,sizeof(output_sms_message),"220v",0);
+		else {
+			str_add_str(output_sms_message,sizeof(output_sms_message),"akkum(",0);
+			str_add_num(output_sms_message,get_batt_status());
+			str_add_str(output_sms_message,sizeof(output_sms_message),"%)",0);
+		}
+		str_add_str(output_sms_message,sizeof(output_sms_message),"\nur. sign.:",0);
+		str_add_num(output_sms_message,(get_gsm_signal_quality()*100/31));
+		str_add_str(output_sms_message,sizeof(output_sms_message),"%",0);
 		send_sms_message_for_all(output_sms_message,SMS_FUNCTION_SERVICE);
 }

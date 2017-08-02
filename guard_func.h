@@ -43,7 +43,7 @@ uint8_t get_powered();
 void TM_check_time();
 void check_battery();
 void check_lamp_blink_time();
-
+uint8_t get_batt_status();
 uint8_t last_control_ID_number;
 char last_control_guard[13];
 
